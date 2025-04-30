@@ -22,7 +22,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping
-    public Page<PaymentResponse> listAll(@PageableDefault(size = 10) Pageable pagination) {
+    public Page<PaymentResponse> listPayment(@PageableDefault(size = 10) Pageable pagination) {
         return paymentService.getAll(pagination);
     }
 
