@@ -9,9 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Entity
 @Table(name = "payment")
@@ -22,7 +20,7 @@ import java.util.UUID;
 public class PaymentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
     
     @NotNull
     @Positive
