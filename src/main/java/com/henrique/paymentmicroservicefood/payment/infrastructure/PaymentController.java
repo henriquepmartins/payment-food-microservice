@@ -33,7 +33,7 @@ public class PaymentController {
         return ResponseEntity.ok(paymentResponse);
     }
 
-    @PostMapping
+    @PostMapping("/{id}")
     public ResponseEntity<PaymentResponse> createPayment(@RequestBody @Valid PaymentResponse paymentResponse, UriComponentsBuilder uriBuilder) {
         PaymentResponse payment = paymentService.createPayment(paymentResponse);
         URI uriPath = uriBuilder.path("/payment/{id}").buildAndExpand(payment.getId()).toUri();
